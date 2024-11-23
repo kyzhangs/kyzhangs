@@ -5,6 +5,19 @@ I'm `kyzhangs`, nice to meet you!
 
 
 <!--START_SECTION:waka-->
+
+```txt
+From: 15 November 2024 - To: 22 November 2024
+
+Total Time: 4 hrs 42 mins
+
+Markdown         2 hrs 36 mins   ██████████████░░░░░░░░░░░   55.50 %
+YAML             2 hrs 3 mins    ███████████░░░░░░░░░░░░░░   43.79 %
+GitIgnore file   1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.43 %
+Python           0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 %
+Image (svg)      0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.07 %
+```
+
 <!--END_SECTION:waka-->
 
 
