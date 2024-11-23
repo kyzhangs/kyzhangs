@@ -1,0 +1,52 @@
+name: Generate Snake Contribution Grid
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '5 3,10,16 * * *'
+
+jobs:
+  generate-snake:
+    name: Generate and Push Snake Grid
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository to access files
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Generate the Snake Contribution Grid using Platane's action
+      - name: Generate Snake Contribution Grid
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      # Move the generated SVG files to the assets directory
+      - name: Push Snake to Assets Directory
+        run: |
+          # Create the assets directory if it doesn't exist
+          rm -rf assets && mkdir -p assets && mv dist/* assets/
+          
+          # Set up git configuration for commit and push
+          git config --global user.name "${GITHUB_USER}"
+          git config --global user.email "${GITHUB_USER}@users.noreply.github.com"
+          
+          # Pull the latest changes before committing
+          git pull --rebase origin $(git rev-parse --abbrev-ref HEAD) || echo "No changes to pull"
+          
+          # Define the commit message
+          MESSAGE="🍻 chore: Updated snake-svg by @${GITHUB_USER}"
+          
+          # Commit and push if there are changes
+          git add assets/
+          git diff --cached --exit-code || git commit -m "${MESSAGE}"
+          git push
+        env:
+          GITHUB_USER: github-actions[bot]
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
