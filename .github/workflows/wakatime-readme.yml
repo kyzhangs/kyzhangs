@@ -1,0 +1,21 @@
+name: Generate Wakatime Readme
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3,10,16 * * *'
+
+jobs:
+  wakatime-readme:
+    name: Generate and Push wakatime readme
+    runs-on: ubuntu-latest
+    steps:
+      - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          SHOW_MASKED_TIME: true
+          SHOW_TITLE: true
+          COMMIT_MESSAGE: "🍻 chore: Updated readme by @github-actions[bot]"
