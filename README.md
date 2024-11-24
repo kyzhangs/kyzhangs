@@ -7,15 +7,15 @@ I'm `kyzhangs`, nice to meet you!
 <!--START_SECTION:waka-->
 
 ```txt
-From: 15 November 2024 - To: 22 November 2024
+From: 16 November 2024 - To: 23 November 2024
 
-Total Time: 4 hrs 42 mins
+Total Time: 5 hrs 42 mins
 
-Markdown         2 hrs 36 mins   ██████████████░░░░░░░░░░░   55.50 %
-YAML             2 hrs 3 mins    ███████████░░░░░░░░░░░░░░   43.79 %
-GitIgnore file   1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.43 %
-Python           0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.18 %
-Image (svg)      0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.07 %
+Markdown         2 hrs 45 mins   ████████████░░░░░░░░░░░░░   48.27 %
+YAML             2 hrs 12 mins   █████████▓░░░░░░░░░░░░░░░   38.76 %
+Java             26 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.78 %
+GitIgnore file   6 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.04 %
+Groovy           6 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.91 %
 ```
 
 <!--END_SECTION:waka-->
