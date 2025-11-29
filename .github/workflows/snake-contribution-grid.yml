@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
   schedule:
-    - cron: '5 10 * * *'
+    - cron: '0 0 * * 1'
 
 jobs:
   generate-snake:
