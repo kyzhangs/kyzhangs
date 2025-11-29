@@ -8,12 +8,12 @@ I'm `kyzhangs`, nice to meet you!
   <tr>
     <td>
       <img alt="top-langs" height=200
-        src="https://github-readme-stats.vercel.app/api?username=kyzhangs&show_icons=true&include_all_commits=true&custom_title=kyzhang%E2%80%98s%20Github%20Stats&theme=buefy&hide_border=true"
+        src="https://github-readme-stats.minions.icu/api?username=kyzhangs&show_icons=true&include_all_commits=true&custom_title=kyzhang%E2%80%98s%20Github%20Stats&theme=buefy&hide_border=true"
       />
     </td>
     <td>
       <img alt="github-stats" height=200
-        src="https://github-readme-stats.vercel.app/api/wakatime?username=kyzhangs&api_domain=wakapi.dev&custom_title=kyzhang%E2%80%98s%20Wakatime%20Stats&layout=compact&theme=buefy&hide_border=true&langs_count=6"
+        src="https://github-readme-stats.minions.icu/api/wakatime?username=kyzhangs&api_domain=wakapi.dev&custom_title=kyzhang%E2%80%98s%20Wakatime%20Stats&layout=compact&theme=buefy&hide_border=true&langs_count=6"
       />
   </tr>
   <tr>
