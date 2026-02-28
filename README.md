@@ -25,6 +25,9 @@ I'm `kyzhangs`, nice to meet you!
       </picture>
     </td>
   </tr>
+  <tr>
+    <td colspan="2">
+      <img src="./assets/game.gif" alt="game" />
+    </td>
+  </tr>
 </table>
-
-![My GitHub Game](game.gif)
