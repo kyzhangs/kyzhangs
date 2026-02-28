@@ -1,9 +1,6 @@
 name: Generate Snake Contribution Grid
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * 1'
@@ -31,7 +28,7 @@ jobs:
       - name: Push Snake to Assets Directory
         run: |
           # Create the assets directory if it doesn't exist
-          rm -rf assets && mkdir -p assets && mv dist/* assets/
+          mkdir -p assets && mv dist/* assets/
           
           # Set up git configuration for commit and push
           git config --global user.name "${GITHUB_USER}"
@@ -44,7 +41,7 @@ jobs:
           MESSAGE="🍻 chore: Updated snake-svg by @${GITHUB_USER}"
           
           # Commit and push if there are changes
-          git add assets/
+          git add .
           git diff --cached --exit-code || git commit -m "${MESSAGE}"
           git push
         env:
