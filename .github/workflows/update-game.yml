@@ -8,13 +8,17 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-assets-main-update
+  cancel-in-progress: false
+
 jobs:
   update-game:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: czl9707/gh-space-shooter@v1
+      - uses: czl9707/gh-space-shooter@6b945979b0cf53e7887e62d32fddcdb5bccbed89 # v2.0.4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'assets/game.gif'

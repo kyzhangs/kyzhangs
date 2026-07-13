@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: '0 0 * * 1'
 
+concurrency:
+  group: profile-assets-main-update
+  cancel-in-progress: false
+
 jobs:
   generate-snake:
     name: Generate and Push Snake Grid
@@ -13,7 +17,7 @@ jobs:
     steps:
       # Checkout the repository to access files
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       # Generate the Snake Contribution Grid using Platane's action
       - name: Generate Snake Contribution Grid
